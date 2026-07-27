@@ -116,6 +116,16 @@
     #mobile-menu.open {
         max-height: 400px;
     }
+    .product-carousel {
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+    .product-carousel::-webkit-scrollbar {
+        display: none;
+    }
+    .product-carousel > * {
+        scroll-snap-align: start;
+    }
 </style>
 </head>
 <body class="text-on-background">
@@ -252,20 +262,18 @@
 </section>
 <!-- Products Showcase -->
 <section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto" id="products">
-<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
-<div>
+<div class="mb-16">
 <span class="text-primary font-label-sm text-label-sm tracking-widest uppercase mb-2 block">Premium Range</span>
 <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">Featured Nutrient Profiles</h2>
 </div>
-<a class="text-primary font-label-md text-label-md flex items-center gap-2 hover:underline shrink-0" href="#contact">
-          View All Products <span class="material-symbols-outlined">keyboard_arrow_right</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-md">
+<div class="relative">
+<div class="product-carousel flex gap-gutter-md overflow-x-auto snap-x snap-mandatory pb-4" id="product-carousel">
 <!-- Product 1: EDTA Zn -->
-<div class="bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
-<div class="h-56 overflow-hidden relative flex items-center justify-center p-8">
-<img class="group-hover:scale-105 transition-transform duration-500 object-contain h-32 w-32" alt="EDTA Zn Chelated Zinc" src="https://lh3.googleusercontent.com/aida/AP1WRLsP_05TbGYFLt2xD6QmlTV2LTz9_rUJOK2bAULd_rR_-L7mOn6w30vumTBG4nvYN4gjuWoLODGShqh5jZeRqMyDbVVtdUb0uTtcNBe-uyQcbr8e70P_IUVI7fBofsMrRdYS56rJ2tY3kmnEyoITAXkpoN8HFN2HVGpl-rMJM3K_Nl1mvZn3_B-ZLurBO5udc24QOyU0H5StUnI1npbGaIBnWcf5a89Io4pa99egCWxFcE1yjb8sQSs"/>
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-primary/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-primary group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+</div>
 <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Chelated</div>
 </div>
 <div class="p-6">
@@ -276,24 +284,28 @@
 </div>
 </div>
 </div>
-<!-- Product 2: Super Potassium Fulvic Humate -->
-<div class="bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
-<div class="h-56 overflow-hidden relative flex items-center justify-center p-8">
-<img class="group-hover:scale-105 transition-transform duration-500 object-contain h-32 w-32" alt="Super Potassium Fulvic Humate" src="https://lh3.googleusercontent.com/aida/AP1WRLtIWFLmGft79jnzI9EMCfg5XEU7a_v0C3B7Y-Pc1lTopDBkINsVW_oI7bRF-S-X8VKQWOdEDa_to51FeRSVzoKzeb8ZC6cl7O76SaumEvbWIMNtZPWx__ueSAGli3MjcvGGwjhBwp7fhY2LKmWwOjCIlZC5kN4ynFg5csnyCoUWCaFsIvUmKx2wJAilrGW4gnSSsG04HKwHQtGraf8CgWcSL33NpAq78JWDbagG-TMVc86KQMUt9g00"/>
-<div class="absolute top-4 left-4 bg-tertiary/90 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Organic</div>
+<!-- Product 2: EDTA B -->
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-primary/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-primary group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+</div>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Chelated</div>
 </div>
 <div class="p-6">
-<h3 class="font-label-md text-label-md text-on-background mb-2">Super Potassium Fulvic Humate</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Premium soil conditioner that enhances nutrient uptake and soil structure.</p>
+<h3 class="font-label-md text-label-md text-on-background mb-2">EDTA B (Boron)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Chelated boron for cell wall strength, flowering, and pollen viability.</p>
 <div class="flex justify-between items-center pt-4 border-t border-surface-container">
 <button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
 </div>
 </div>
 </div>
 <!-- Product 3: EDTA Mn -->
-<div class="bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
-<div class="h-56 overflow-hidden relative flex items-center justify-center p-8">
-<img class="group-hover:scale-105 transition-transform duration-500 object-contain h-32 w-32" alt="EDTA Mn Chelated Manganese" src="https://lh3.googleusercontent.com/aida/AP1WRLsP_05TbGYFLt2xD6QmlTV2LTz9_rUJOK2bAULd_rR_-L7mOn6w30vumTBG4nvYN4gjuWoLODGShqh5jZeRqMyDbVVtdUb0uTtcNBe-uyQcbr8e70P_IUVI7fBofsMrRdYS56rJ2tY3kmnEyoITAXkpoN8HFN2HVGpl-rMJM3K_Nl1mvZn3_B-ZLurBO5udc24QOyU0H5StUnI1npbGaIBnWcf5a89Io4pa99egCWxFcE1yjb8sQSs"/>
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-primary/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-primary group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+</div>
 <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Chelated</div>
 </div>
 <div class="p-6">
@@ -304,52 +316,12 @@
 </div>
 </div>
 </div>
-<!-- Product 4: Amino Acid 50% -->
-<div class="bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
-<div class="h-56 overflow-hidden relative flex items-center justify-center p-8">
-<img class="group-hover:scale-105 transition-transform duration-500 object-contain h-32 w-32" alt="Amino Acid 50%" src="https://lh3.googleusercontent.com/aida/AP1WRLs4TV2LCN3tR50JshWjRqyJF3IEpbUM9FqxDKG3LVP4y7QX1iVkmKImBH-xw2JzcnBawEeZqFfAOGZNkyhwXjsqLW20RgoSxAdsXa8ND1cRjeZzkZFOxAhwHR5u6bYjSpaEhm9VpNl3P_N0WGgHnuURzE89Jtopt6O6HcKDe1iXGsAVxtXvcEtcCA03nLaMAw_SVok7BS8anZEJIF9J7iwcIumtSAhdnC6e2iMKnbzB44iQKFsiyh4"/>
-<div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Biostimulant</div>
+<!-- Product 4: EDTA Fe -->
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-primary/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-primary group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
 </div>
-<div class="p-6">
-<h3 class="font-label-md text-label-md text-on-background mb-2">Amino Acid 50% Powder</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Natural plant growth stimulant derived from organic sources.</p>
-<div class="flex justify-between items-center pt-4 border-t border-surface-container">
-<button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
-</div>
-</div>
-</div>
-<!-- Product 5: EDTA Mix -->
-<div class="bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
-<div class="h-56 overflow-hidden relative flex items-center justify-center p-8">
-<img class="group-hover:scale-105 transition-transform duration-500 object-contain h-32 w-32" alt="EDTA Mix Micronutrients" src="https://lh3.googleusercontent.com/aida/AP1WRLsP_05TbGYFLt2xD6QmlTV2LTz9_rUJOK2bAULd_rR_-L7mOn6w30vumTBG4nvYN4gjuWoLODGShqh5jZeRqMyDbVVtdUb0uTtcNBe-uyQcbr8e70P_IUVI7fBofsMrRdYS56rJ2tY3kmnEyoITAXkpoN8HFN2HVGpl-rMJM3K_Nl1mvZn3_B-ZLurBO5udc24QOyU0H5StUnI1npbGaIBnWcf5a89Io4pa99egCWxFcE1yjb8sQSs"/>
-<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Chelated</div>
-</div>
-<div class="p-6">
-<h3 class="font-label-md text-label-md text-on-background mb-2">EDTA Multi-Mix</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Balanced blend of chelated micronutrients for comprehensive plant health.</p>
-<div class="flex justify-between items-center pt-4 border-t border-surface-container">
-<button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
-</div>
-</div>
-</div>
-<!-- Product 6: Potassium Nitrate -->
-<div class="bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
-<div class="h-56 overflow-hidden relative flex items-center justify-center p-8">
-<img class="group-hover:scale-105 transition-transform duration-500 object-contain h-32 w-32" alt="Potassium Nitrate" src="https://lh3.googleusercontent.com/aida/AP1WRLt12zdt0myLlkhDHWcWUxzbgIs3kLCGJtbfWNrTiVB9asedEuX3Ep5ShOTIGRCAU7QtkWgxKca58mP6P70sFrpYNXY3NccD4s3CGRa-Or6KdXlJH70vK8886b8pAgu_zpa__r_AWozRsHpAr6Exe9x2PSyH0LCy-jt7RME1q3B8I4QsNrHEnyAXHT9BnpojqQwG8z0RucCF4efPXY5uf0eMRKFsqg5syZ1q2M1fuYgT4LX3Q4sbw5bK"/>
-<div class="absolute top-4 left-4 bg-tertiary/90 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Soluble</div>
-</div>
-<div class="p-6">
-<h3 class="font-label-md text-label-md text-on-background mb-2">Potassium Nitrate (13-0-46)</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Fully water-soluble nitrogen and potassium source for fertigation.</p>
-<div class="flex justify-between items-center pt-4 border-t border-surface-container">
-<button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
-</div>
-</div>
-</div>
-<!-- Product 7: EDTA Fe -->
-<div class="bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
-<div class="h-56 overflow-hidden relative flex items-center justify-center p-8">
-<img class="group-hover:scale-105 transition-transform duration-500 object-contain h-32 w-32" alt="EDTA Fe Chelated Iron" src="https://lh3.googleusercontent.com/aida/AP1WRLsP_05TbGYFLt2xD6QmlTV2LTz9_rUJOK2bAULd_rR_-L7mOn6w30vumTBG4nvYN4gjuWoLODGShqh5jZeRqMyDbVVtdUb0uTtcNBe-uyQcbr8e70P_IUVI7fBofsMrRdYS56rJ2tY3kmnEyoITAXkpoN8HFN2HVGpl-rMJM3K_Nl1mvZn3_B-ZLurBO5udc24QOyU0H5StUnI1npbGaIBnWcf5a89Io4pa99egCWxFcE1yjb8sQSs"/>
 <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Chelated</div>
 </div>
 <div class="p-6">
@@ -360,10 +332,76 @@
 </div>
 </div>
 </div>
-<!-- Product 8: Calcium Nitrate -->
-<div class="bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
-<div class="h-56 overflow-hidden relative flex items-center justify-center p-8">
-<img class="group-hover:scale-105 transition-transform duration-500 object-contain h-32 w-32" alt="Calcium Nitrate" src="https://lh3.googleusercontent.com/aida/AP1WRLt12zdt0myLlkhDHWcWUxzbgIs3kLCGJtbfWNrTiVB9asedEuX3Ep5ShOTIGRCAU7QtkWgxKca58mP6P70sFrpYNXY3NccD4s3CGRa-Or6KdXlJH70vK8886b8pAgu_zpa__r_AWozRsHpAr6Exe9x2PSyH0LCy-jt7RME1q3B8I4QsNrHEnyAXHT9BnpojqQwG8z0RucCF4efPXY5uf0eMRKFsqg5syZ1q2M1fuYgT4LX3Q4sbw5bK"/>
+<!-- Product 5: EDTA Ca -->
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-primary/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-primary group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+</div>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Chelated</div>
+</div>
+<div class="p-6">
+<h3 class="font-label-md text-label-md text-on-background mb-2">EDTA Ca (Calcium)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Chelated calcium for stronger cell walls, improved firmness, and extended shelf life.</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container">
+<button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
+</div>
+</div>
+</div>
+<!-- Product 6: Super Potassium Fulvic Humate -->
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-tertiary/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-tertiary group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 4c0 8-3.5 13-8 15z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+</div>
+<div class="absolute top-4 left-4 bg-tertiary/90 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Organic</div>
+</div>
+<div class="p-6">
+<h3 class="font-label-md text-label-md text-on-background mb-2">Super Potassium Fulvic Humate (Shiny Flakes)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Premium soil conditioner in shiny flake form that enhances nutrient uptake and soil structure.</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container">
+<button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
+</div>
+</div>
+</div>
+<!-- Product 7: Amino Acid 50% -->
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-secondary/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-secondary group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+</div>
+<div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Biostimulant</div>
+</div>
+<div class="p-6">
+<h3 class="font-label-md text-label-md text-on-background mb-2">Amino Acid 50% Powder</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Natural plant growth stimulant derived from organic sources.</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container">
+<button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
+</div>
+</div>
+</div>
+<!-- Product 8: Potassium Nitrate -->
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-tertiary/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-tertiary group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+</div>
+<div class="absolute top-4 left-4 bg-tertiary/90 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Soluble</div>
+</div>
+<div class="p-6">
+<h3 class="font-label-md text-label-md text-on-background mb-2">Potassium Nitrate (13-0-46)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Fully water-soluble nitrogen and potassium source for fertigation.</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container">
+<button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
+</div>
+</div>
+</div>
+<!-- Product 9: Calcium Nitrate -->
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-tertiary/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-tertiary group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+</div>
 <div class="absolute top-4 left-4 bg-tertiary/90 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Soluble</div>
 </div>
 <div class="p-6">
@@ -374,15 +412,150 @@
 </div>
 </div>
 </div>
+<!-- Product 10: Zinc Sulphate Heptahydrate 21% -->
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-outline/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-outline group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>
+</div>
+<div class="absolute top-4 left-4 bg-outline text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Sulphate</div>
+</div>
+<div class="p-6">
+<h3 class="font-label-md text-label-md text-on-background mb-2">Zinc Sulphate Heptahydrate 21%</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Fast-acting zinc source for correcting deficiencies in zinc-depleted soils.</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container">
+<button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
+</div>
+</div>
+</div>
+<!-- Product 11: Zinc Sulphate Monohydrate 33% -->
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-outline/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-outline group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>
+</div>
+<div class="absolute top-4 left-4 bg-outline text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Sulphate</div>
+</div>
+<div class="p-6">
+<h3 class="font-label-md text-label-md text-on-background mb-2">Zinc Sulphate Monohydrate 33%</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Concentrated, low-moisture zinc sulphate ideal for granular blends and foliar sprays.</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container">
+<button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
+</div>
+</div>
+</div>
+<!-- Product 12: Copper Sulphate Powder 24.5% -->
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-outline/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-outline group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>
+</div>
+<div class="absolute top-4 left-4 bg-outline text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Sulphate</div>
+</div>
+<div class="p-6">
+<h3 class="font-label-md text-label-md text-on-background mb-2">Copper Sulphate Powder 24.5%</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Essential copper source supporting enzyme activity and disease resistance.</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container">
+<button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
+</div>
+</div>
+</div>
+<!-- Product 13: Manganese Sulphate -->
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-outline/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-outline group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>
+</div>
+<div class="absolute top-4 left-4 bg-outline text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Sulphate</div>
+</div>
+<div class="p-6">
+<h3 class="font-label-md text-label-md text-on-background mb-2">Manganese Sulphate</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Readily available manganese for photosynthesis and nitrogen metabolism.</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container">
+<button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
+</div>
+</div>
+</div>
+<!-- Product 14: Ferrous Sulphate Heptahydrate 19% -->
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-outline/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-outline group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>
+</div>
+<div class="absolute top-4 left-4 bg-outline text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Sulphate</div>
+</div>
+<div class="p-6">
+<h3 class="font-label-md text-label-md text-on-background mb-2">Ferrous Sulphate Heptahydrate 19%</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Economical iron source for correcting chlorosis in acidic to neutral soils.</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container">
+<button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
+</div>
+</div>
+</div>
+<!-- Product 15: Ferrous Sulphate Anhydrous -->
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-outline/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-outline group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>
+</div>
+<div class="absolute top-4 left-4 bg-outline text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Sulphate</div>
+</div>
+<div class="p-6">
+<h3 class="font-label-md text-label-md text-on-background mb-2">Ferrous Sulphate Anhydrous</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Concentrated, stable iron sulphate for blending into custom fertilizer mixes.</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container">
+<button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
+</div>
+</div>
+</div>
+<!-- Product 16: Magnesium Sulphate Anhydrous -->
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-outline/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-outline group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>
+</div>
+<div class="absolute top-4 left-4 bg-outline text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Sulphate</div>
+</div>
+<div class="p-6">
+<h3 class="font-label-md text-label-md text-on-background mb-2">Magnesium Sulphate Anhydrous</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">High-concentration magnesium for chlorophyll production and enzyme activation.</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container">
+<button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
+</div>
+</div>
+</div>
+<!-- Product 17: Magnesium Sulphate Heptahydrate -->
+<div class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[23%] bg-white rounded-xl overflow-hidden card-shadow border border-tertiary/10 group">
+<div class="h-56 overflow-hidden relative flex items-center justify-center p-8 bg-outline/5">
+<div class="h-24 w-24 rounded-full bg-white shadow-sm flex items-center justify-center text-outline group-hover:scale-105 transition-transform duration-500">
+<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>
+</div>
+<div class="absolute top-4 left-4 bg-outline text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Sulphate</div>
+</div>
+<div class="p-6">
+<h3 class="font-label-md text-label-md text-on-background mb-2">Magnesium Sulphate Heptahydrate</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Highly soluble magnesium and sulfur source, ideal for fertigation and foliar feeding.</p>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container">
+<button class="text-primary font-label-sm text-label-sm hover:underline">Learn More</button>
+</div>
+</div>
+</div>
+</div>
+<button id="product-prev" aria-label="Previous products" class="hidden md:flex absolute top-1/2 -left-5 -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-lg items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors z-10">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button id="product-next" aria-label="Next products" class="hidden md:flex absolute top-1/2 -right-5 -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-lg items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors z-10">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
 </div>
 </section>
 <!-- Growth Indicators / Stats -->
 <section class="py-16 bg-primary text-on-primary" id="growth">
 <div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-<!--<div>
+<div>
 <div class="font-headline-lg text-headline-lg mb-1">1.2M+</div>
 <div class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-widest">Acres Nourished</div>
-</div>-->
+</div>
 <div>
 <div class="font-headline-lg text-headline-lg mb-1">24%</div>
 <div class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-widest">Avg. Yield Increase</div>
@@ -392,7 +565,7 @@
 <div class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-widest">Organic Certified</div>
 </div>
 <div>
-<div class="font-headline-lg text-headline-lg mb-1">20+</div>
+<div class="font-headline-lg text-headline-lg mb-1">450+</div>
 <div class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-widest">Wholesale Partners</div>
 </div>
 </div>
@@ -508,6 +681,21 @@
         header.classList.remove('shadow-md');
       }
     });
+
+    // Product carousel arrow controls
+    const productCarousel = document.getElementById('product-carousel');
+    const productPrev = document.getElementById('product-prev');
+    const productNext = document.getElementById('product-next');
+
+    if (productCarousel && productPrev && productNext) {
+      const scrollByCard = (direction) => {
+        const card = productCarousel.querySelector(':scope > div');
+        const distance = card ? card.getBoundingClientRect().width + 24 : productCarousel.clientWidth * 0.8;
+        productCarousel.scrollBy({ left: direction * distance, behavior: 'smooth' });
+      };
+      productPrev.addEventListener('click', () => scrollByCard(-1));
+      productNext.addEventListener('click', () => scrollByCard(1));
+    }
 
     // Mobile menu toggle
     const menuToggle = document.getElementById('menu-toggle');
